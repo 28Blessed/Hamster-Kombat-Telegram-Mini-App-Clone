@@ -1,34 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Hamster from './icons/Hamster';
+import { binanceLogo, dailyCipher, dailyCombo, dailyReward, dollarCoin, hamsterCoin, mainCharacter } from './images';
+import Info from './icons/Info';
+import Settings from './icons/Settings';
+import Mine from './icons/Mine';
+import Friends from './icons/Friends';
+import Coins from './icons/Coins';
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="bg-black flex justify-center">
+      <div className="w-full bg-black text-white h-screen font-bold flex flex-col max-w x1">
+
+        <div className="px 4 z-10">
+
+          <div className="flex items-center space-x-2 pt-4">
+            <div className="p-1 rounded-lg bg-[#1d2025]">
+              <Hamster size={24} className="text-[#d4d4d4]" />
+              </div>
+          <div>
+            <p className="text-sm">Kobe (CEO)</p>
+            </div>
+            </div>
+            </div>
+</div>            
+            <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs">
+        <div className="text-center text-[#85827d] w-1/5 bg-[#1c1f24] m-1 p-2 rounded-2xl">
+          <img src={binanceLogo} alt="Exchange" className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Exchange</p>
+        </div>
+        <div className="text-center text-[#85827d] w-1/5">
+          <Mine className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Mine</p>
+        </div>
+        <div className="text-center text-[#85827d] w-1/5">
+          <Friends className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Friends</p>
+        </div>
+        <div className="text-center text-[#85827d] w-1/5">
+          <Coins className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Earn</p>
+        </div>
+        <div className="text-center text-[#85827d] w-1/5">
+          <img src={hamsterCoin} alt="Airdrop" className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Airdrop</p>
+        </div>
+    
+              <p className="mt-1">Exchange</p>
+        </div>
+        </div>
+        
   )
 }
 
